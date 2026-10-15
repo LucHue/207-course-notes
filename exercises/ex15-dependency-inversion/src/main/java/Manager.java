@@ -28,9 +28,7 @@
  */
 public class Manager {
 
-  // TODO: the type of this field is the problem — it names a concrete class
-  //       rather than the abstraction. Change it to IWorker.
-  private Worker worker;
+  private IWorker worker;
 
   /**
    * Sets the worker that this manager manages.
@@ -38,9 +36,7 @@ public class Manager {
    * @param worker the worker to manage
    */
   public void setWorker(IWorker worker) {
-    // TODO: store the worker that was passed in, instead of ignoring it and
-    //       hard-coding a new Worker.
-    this.worker = new Worker();
+    this.worker = worker;
   }
 
   /**
